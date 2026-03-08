@@ -244,6 +244,9 @@ body::-webkit-scrollbar {
     white-space: nowrap;
   }
   
+  .footer-nav a:hover {
+    color: #4df9ffe4
+  }
   
   .footer-credits {
     display: flex;
@@ -267,3 +270,4 @@ body::-webkit-scrollbar {
   }
 
 }
+
