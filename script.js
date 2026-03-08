@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  
+
+  // PRELOADER (no forced delay)
   const preloader = document.getElementById("preloader");
 
   if (preloader) {
@@ -7,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
     preloader.style.visibility = "hidden";
 
     setTimeout(() => {
-        preloader.style.display = "none";
-      }, 600); 
-  
-    }, 2000); 
+      preloader.style.display = "none";
+    }, 500); // small fade-out time
   }
 
+
+  // BANNER SLIDER
   const wrapper = document.querySelector(".banner-wrapper");
   const slides = document.querySelectorAll(".banner-slide");
 
@@ -20,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let index = 0;
   let slideWidth = slides[0].clientWidth;
-
 
   const firstClone = slides[0].cloneNode(true);
   wrapper.appendChild(firstClone);
@@ -42,4 +42,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+});
 });
