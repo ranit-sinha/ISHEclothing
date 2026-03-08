@@ -1,15 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // PRELOADER (no forced delay)
+  // HIDE PRELOADER IMMEDIATELY
   const preloader = document.getElementById("preloader");
-
   if (preloader) {
-    preloader.style.opacity = "0";
-    preloader.style.visibility = "hidden";
-
-    setTimeout(() => {
-      preloader.style.display = "none";
-    }, 500); // small fade-out time
+    preloader.style.display = "none";
   }
 
 
@@ -27,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function nextSlide() {
     index++;
-
     wrapper.style.transition = "transform 0.6s ease";
     wrapper.style.transform = `translateX(-${slideWidth * index}px)`;
   }
@@ -42,5 +35,4 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-});
 });
