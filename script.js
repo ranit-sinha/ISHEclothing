@@ -1,6 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-
-  // PRELOADER
+  
   const preloader = document.getElementById("preloader");
 
   if (preloader) {
@@ -8,12 +7,12 @@ document.addEventListener("DOMContentLoaded", function () {
     preloader.style.visibility = "hidden";
 
     setTimeout(() => {
-      preloader.style.display = "none";
-    }, 500);
+        preloader.style.display = "none";
+      }, 600); 
+  
+    }, 2000); 
   }
 
-
-  // BANNER SLIDER
   const wrapper = document.querySelector(".banner-wrapper");
   const slides = document.querySelectorAll(".banner-slide");
 
@@ -22,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let index = 0;
   let slideWidth = slides[0].clientWidth;
 
-  // clone first slide for smooth infinite effect
+
   const firstClone = slides[0].cloneNode(true);
   wrapper.appendChild(firstClone);
 
