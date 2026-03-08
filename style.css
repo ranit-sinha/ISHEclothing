@@ -1,0 +1,323 @@
+
+  #preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background:linear-gradient(240deg, antiquewhite, #fad5a5, #ffadf1);
+  display: flex;
+    justify-content: center;
+    align-items: center; 
+  z-index: 99999;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.2s ease-in-out, visibility 1.2s ease-in-out; 
+}
+
+.loader-logo {
+  width: 1300px;
+  height: auto;
+  text-align: center;
+  transform: translateY(-150px); 
+}
+
+.preloader-hidden {
+  opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+margin:0 0;
+font-family:Arial;
+background:linear-gradient(70deg,#80ddff,#fad5a5,#ffadf1);
+}
+
+html, body {
+  overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 10px 30px;
+    background: linear-gradient(120deg,antiquewhite,#fad5a5,#ffadf1 );
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 37px;
+    padding: 5px 0px;
+}
+
+.nav-icon {-webkit-tap-highlight-color: transparent;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 5px 0px 0px 0px;
+    color: #ab6065;
+}
+
+.nav-icon:hover {
+    color: #8c374e;
+    transition: 0.3s;
+}
+
+.wishlist:hover .fa-heart,
+.user:hover .fa-user,
+.cart:hover .fa-bag-shopping {
+  font-weight: 900;
+}
+
+
+
+.logo {
+    height: 60px;
+    width: auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    padding-left: 5px;
+    object-fit: contain;
+}
+
+.banner{
+    width:100%;
+    aspect-ratio:16/8;
+    position:relative;
+    overflow:hidden;
+}
+
+.banner-wrapper{
+    display:flex;
+    height:100%;
+    transition:transform 1.3s ease;
+}
+
+.banner-slide{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    flex-shrink: 0;
+}
+
+.product-section{
+    padding:0px 0px;
+}
+
+.section-title{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+.product-slider{
+    display:flex;
+    gap:12px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom:10px;
+    padding-left: 10px;
+}
+
+.product-card{
+    background:transparent;
+    border-radius:8px;
+    flex: 0 0 calc(25% - 22.5px);
+    max-width: calc(25% - 22.5px);
+    flex-shrink: 0;
+    padding:0px;
+    display:flex;
+    flex-direction:column;
+}
+
+.product-card img{
+    width:100%;
+    height:auto;
+    aspect-ratio: 3 / 5;
+    object-fit:cover;
+    border-radius:8px;
+    display:block;
+}
+
+.product-card p {
+    text-align:center;
+    margin-top: 9px;
+    margin-bottom: 0px;
+    font-size: 23px;
+}
+
+
+    .old-money .product-card p {
+      font-family: "UnifrakturMaguntia", cursive;
+      font-weight: 400;
+      font-style: normal;
+      padding-top:3px;
+      font-size: 21px;
+    }
+    
+    .downtown .product-card p {
+      font-family: "Luckiest Guy", cursive;
+      font-weight: 300;
+      font-style: normal;
+      padding-top:5px;
+      font-size: 19px;
+    }
+    
+    .ethnic .product-card p {
+      font-family: "Calligraffitti", cursive;
+      font-weight: 600;
+      font-style: bold;
+      font-size: 21px;
+    }
+    
+    .countryside .product-card p {
+      font-family: "Satisfy", cursive;
+      font-weight: 400;
+      font-style: bold;
+      font-size: 21px;
+    }
+    
+    .cottagecore .product-card p {
+      font-family: 'Yellowtail', cursive;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 21px;
+      padding-top:0px;
+    }
+    
+    .athleisure .product-card p {
+      font-family: "Acme", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 20px;
+    }
+    
+    .academia .product-card p {
+      font-family: "Kelly Slab", sans-serif;
+      font-weight: 400;
+      font-style: bold;
+      
+    }
+    
+    .coastal-cowgirl .product-card p {
+      font-family: "Shadows Into Light", cursive;
+      font-weight: 400;
+      font-style: bold;
+      font-size: 21px;
+      padding-top:0px;
+    }
+    
+    .y2k .product-card p {
+      font-family: "Permanent Marker", cursive;
+      font-weight: 300;
+      font-style: normal;
+      padding-top:0px;
+    }
+    
+    .boho-chic .product-card p {
+      font-family: "Original Surfer", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+
+ .shop-footer {
+    background-color: black;
+    color: white;
+    padding: 10px 10px 0px 10px ;
+    width: 100%;
+    margin-top: auto;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+  }
+  
+  .footer-content {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  
+  .footer-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+    padding: 0;
+    letter-spacing: 2px;
+    flex: 1;
+  }
+  
+  
+  .footer-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin: 0px 40px 0px 40px ;
+    padding: 5px 30px;
+    width: 100%;
+    flex: 1;
+    box-sizing: border-box;
+  }
+  
+  .footer-nav a {
+    text-decoration: none;
+    gap: 8px;
+    color: white;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  
+  
+  .footer-credits {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    gap: 15px;
+    padding-bottom: 10px;
+    margin: 0px 15px 5px 15px;
+    box-sizing: border-box;
+    flex: 1;
+  }
+
+.credit-item p {
+    margin: 0px 0px 2px 0px;
+    font-size: 12px;
+  }
+  
+  .credit-item a {
+    font-size: 10px;
+    color: white;
+    text-decoration: underline;
+  }
