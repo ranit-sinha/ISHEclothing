@@ -1,4 +1,4 @@
-window.addEventListener("load", function() {
+document.addEventListener("DOMContentLoaded", function() {
     const preloader = document.getElementById("preloader");
     
     
@@ -8,7 +8,7 @@ window.addEventListener("load", function() {
         
         
     setTimeout(function() {
-        preloader.style.display = "none";}, 1100);
+        preloader.style.display = "none";}, 1200);
     }, 2000); 
 });
 
