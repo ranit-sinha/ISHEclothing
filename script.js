@@ -1,45 +1,46 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const preloader = document.getElementById("preloader");
-    
-    
-    setTimeout(function() {
-        preloader.style.opacity = "0";
-        preloader.style.visibility = "hidden";
-        
-        
-    setTimeout(function() {
-        preloader.style.display = "none";}, 1200);
-    }, 2000); 
-});
+document.addEventListener("DOMContentLoaded", function () {
 
-const wrapper = document.querySelector(".banner-wrapper");
-const slides = document.querySelectorAll(".banner-slide");
+  // PRELOADER
+  const preloader = document.getElementById("preloader");
 
-let index = 0;
-let slideWidth;
-window.addEventListener("load", () => {
-  slideWidth = slides[0].clientWidth;
-});
+  if (preloader) {
+    preloader.style.opacity = "0";
+    preloader.style.visibility = "hidden";
 
-
-const firstClone = slides[0].cloneNode(true);
-wrapper.appendChild(firstClone);
-
-function nextSlide() {
-  index++;
-  wrapper.style.transition = "transform 0.6s ease";
-  wrapper.style.transform = `translateX(-${slideWidth * index}px)`;
-}
-
-setInterval(nextSlide, 4000);
-
-wrapper.addEventListener("transitionend", () => {
-  if (index === slides.length) {
-    wrapper.style.transition = "none";
-    index = 0;
-    wrapper.style.transform = `translateX(0px)`;
+    setTimeout(() => {
+      preloader.style.display = "none";
+    }, 500);
   }
+
+
+  // BANNER SLIDER
+  const wrapper = document.querySelector(".banner-wrapper");
+  const slides = document.querySelectorAll(".banner-slide");
+
+  if (!wrapper || slides.length === 0) return;
+
+  let index = 0;
+  let slideWidth = slides[0].clientWidth;
+
+  // clone first slide for smooth infinite effect
+  const firstClone = slides[0].cloneNode(true);
+  wrapper.appendChild(firstClone);
+
+  function nextSlide() {
+    index++;
+
+    wrapper.style.transition = "transform 0.6s ease";
+    wrapper.style.transform = `translateX(-${slideWidth * index}px)`;
+  }
+
+  setInterval(nextSlide, 4000);
+
+  wrapper.addEventListener("transitionend", () => {
+    if (index === slides.length) {
+      wrapper.style.transition = "none";
+      index = 0;
+      wrapper.style.transform = "translateX(0px)";
+    }
+  });
+
 });
-
-
-
