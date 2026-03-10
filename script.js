@@ -1,38 +1,72 @@
-document.addEventListener("DOMContentLoaded", function () {
+(function () {
 
-  // HIDE PRELOADER IMMEDIATELY
   const preloader = document.getElementById("preloader");
-  if (preloader) {
-    preloader.style.display = "none";
+  const PRELOAD_MS = 2200;
+  const pageStartTime = Date.now();
+
+  function hidePreloader() {
+    if (!preloader) return;
+    preloader.classList.add("preloader-hidden");
+  
+  
+    setTimeout(function () {
+      preloader.style.display = "none";
+    }, 1300);
   }
 
 
-  // BANNER SLIDER
-  const wrapper = document.querySelector(".banner-wrapper");
-  const slides = document.querySelectorAll(".banner-slide");
-
-  if (!wrapper || slides.length === 0) return;
-
-  let index = 0;
-  let slideWidth = slides[0].clientWidth;
-
-  const firstClone = slides[0].cloneNode(true);
-  wrapper.appendChild(firstClone);
-
-  function nextSlide() {
-    index++;
-    wrapper.style.transition = "transform 0.6s ease";
-    wrapper.style.transform = `translateX(-${slideWidth * index}px)`;
+  function tryHide() {
+    const elapsed = Date.now() - pageStartTime;
+    const remaining = Math.max(0, PRELOAD_MS - elapsed);
+    setTimeout(hidePreloader, remaining);
   }
 
-  setInterval(nextSlide, 4000);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", tryHide);
+  } else {
+  
+    tryHide();
+  }
 
-  wrapper.addEventListener("transitionend", () => {
-    if (index === slides.length) {
-      wrapper.style.transition = "none";
-      index = 0;
-      wrapper.style.transform = "translateX(0px)";
+  setTimeout(hidePreloader, 4000);
+
+
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const wrapper = document.querySelector(".banner-wrapper");
+    const slides  = document.querySelectorAll(".banner-slide");
+
+    if (!wrapper || slides.length === 0) return;
+
+    let index = 0;
+
+  
+    const firstClone = slides[0].cloneNode(true);
+    firstClone.setAttribute("loading", "lazy");
+    wrapper.appendChild(firstClone);
+
+    function getSlideWidth() {
+      return slides[0].clientWidth || wrapper.clientWidth;
     }
+
+    function nextSlide() {
+      index++;
+      const w = getSlideWidth();
+      wrapper.style.transition = "transform 0.6s ease";
+      wrapper.style.transform  = "translateX(-" + (w * index) + "px)";
+    }
+
+    wrapper.addEventListener("transitionend", function () {
+      if (index >= slides.length) {
+      
+        wrapper.style.transition = "none";
+        index = 0;
+        wrapper.style.transform = "translateX(0px)";
+      }
+    });
+
+    setInterval(nextSlide, 4000);
+
   });
 
-});
+})();
