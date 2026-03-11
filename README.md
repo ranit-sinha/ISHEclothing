@@ -2,7 +2,7 @@
 
 > Fashion That Defines You
 
-A frontend e-commerce website for ISHÃ‰ Clothing, a multi-aesthetic fashion brand. Built as a pure HTML/CSS/JS project with no frameworks or databases â€” designed to be fast, mobile-first, and visually distinctive.
+A frontend e-commerce website for ISHÉ Clothing, a multi-aesthetic fashion brand. Built as a pure HTML/CSS/JS project with no frameworks or databases designed to be fast, mobile-first, and visually distinctive.
 
 ---
 
