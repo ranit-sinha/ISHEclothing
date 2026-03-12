@@ -1,232 +1,398 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <title>ISHÉ</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ISHÉ Clothing — Fashion That Defines You. Shop Old Money, Y2K, Ethnic, Cottagecore and more.">
 
+<!-- ═══ PWA — ANDROID ═══ -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#fad5a5">
+<meta name="mobile-web-app-capable" content="yes">
+
+<!-- ═══ PWA — iOS / APPLE ═══ -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="ISHÉ">
+<!-- App icon for iOS home screen -->
+<link rel="apple-touch-icon" href="images/logobanner/icon-512.png">
+<!-- Splash screens for iOS (covers most common iPhone screen sizes) -->
+<link rel="apple-touch-startup-image" media="(device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3)" href="images/logobanner/splash.png">
+<link rel="apple-touch-startup-image" media="(device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3)" href="images/logobanner/splash.png">
+<link rel="apple-touch-startup-image" media="(device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3)" href="images/logobanner/splash.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" href="images/logobanner/splash.png">
+<link rel="apple-touch-startup-image" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" href="images/logobanner/splash.png">
+<link rel="apple-touch-startup-image" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" href="images/logobanner/splash.png">
+<!-- Fallback for all other iOS sizes -->
+<link rel="apple-touch-startup-image" href="images/logobanner/splash.png">
+
+<!-- ═══ FONTS — non-blocking ═══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Acme&family=Calligraffitti&family=Kelly+Slab&family=Luckiest+Guy&family=Original+Surfer&family=Permanent+Marker&family=Satisfy&family=Shadows+Into+Light&family=UnifrakturMaguntia&family=Yellowtail&display=swap">
 <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Acme&family=Calligraffitti&family=Kelly+Slab&family=Luckiest+Guy&family=Original+Surfer&family=Permanent+Marker&family=Satisfy&family=Shadows+Into+Light&family=UnifrakturMaguntia&family=Yellowtail&display=swap">
-<noscript>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&family=Calligraffitti&family=Kelly+Slab&family=Luckiest+Guy&family=Original+Surfer&family=Permanent+Marker&family=Satisfy&family=Shadows+Into+Light&family=UnifrakturMaguntia&family=Yellowtail&display=swap">
-</noscript>
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&family=Calligraffitti&family=Kelly+Slab&family=Luckiest+Guy&family=Original+Surfer&family=Permanent+Marker&family=Satisfy&family=Shadows+Into+Light&family=UnifrakturMaguntia&family=Yellowtail&display=swap"></noscript>
 
+<!-- ═══ CSS ═══ -->
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="responsive.css">
 
+<!-- ═══ FONT AWESOME — non-blocking ═══ -->
 <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <link rel="stylesheet" media="print" onload="this.media='all'" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<noscript>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</noscript>
-
+<noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
 </head>
-
 <body>
 
-
+<!-- PRELOADER -->
 <div id="preloader">
   <div class="loader-content">
-    <img src="images/logobanner/logo2.webp" alt="ISHÉ" class="loader-logo">
+    <img src="images/logobanner/logo2.webp" alt="ISHE" class="loader-logo">
   </div>
 </div>
 
+<!-- ANNOUNCEMENT MARQUEE -->
+<div class="marquee-bar">
+  <div class="marquee-track">
+    <span>FREE SHIPPING ON ORDERS ABOVE 999</span>
+    <span class="mdot">✦</span>
+    <span>NEW ARRIVALS EVERY FRIDAY</span>
+    <span class="mdot">✦</span>
+    <span>10 EXCLUSIVE STYLE AESTHETICS</span>
+    <span class="mdot">✦</span>
+    <span>FASHION THAT DEFINES YOU</span>
+    <span class="mdot">✦</span>
+    <span>FREE SHIPPING ON ORDERS ABOVE 999</span>
+    <span class="mdot">✦</span>
+    <span>NEW ARRIVALS EVERY FRIDAY</span>
+    <span class="mdot">✦</span>
+    <span>10 EXCLUSIVE STYLE AESTHETICS</span>
+    <span class="mdot">✦</span>
+    <span>FASHION THAT DEFINES YOU</span>
+    <span class="mdot">✦</span>
+  </div>
+</div>
 
-<header class="navbar">
-
+<!-- NAVBAR -->
+<header class="navbar" id="navbar">
   <div class="nav-left">
     <div class="logo">
-
-
-      <img src="images/logobanner/ishelogo.webp" alt="ISHÉ" loading="eager">
+      <img src="images/logobanner/ishelogo.webp" alt="ISHE" loading="eager">
     </div>
   </div>
-
   <div class="nav-right">
-    <div class="nav-icon search"><i class="fa-solid fa-magnifying-glass"></i></div>
+    <div class="nav-icon search" id="searchToggle"><i class="fa-solid fa-magnifying-glass"></i></div>
     <div class="nav-icon user"><i class="fa-regular fa-user"></i></div>
-    <div class="nav-icon wishlist"><i class="fa-regular fa-heart"></i></div>
-    <div class="nav-icon cart"><i class="fa-solid fa-bag-shopping"></i></div>
-    <div class="nav-icon menu"><i class="fa-solid fa-bars"></i></div>
+    <div class="nav-icon wishlist" id="wishlistToggle">
+      <i class="fa-regular fa-heart"></i>
+      <span class="badge" id="wishlistBadge" style="display:none">0</span>
+    </div>
+    <div class="nav-icon cart" id="cartToggle">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span class="badge" id="cartBadge" style="display:none">0</span>
+    </div>
+    <div class="nav-icon menu" id="menuToggle"><i class="fa-solid fa-bars"></i></div>
   </div>
-
 </header>
 
+<!-- SEARCH OVERLAY -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <i class="fa-solid fa-magnifying-glass search-icon-inside"></i>
+    <input type="text" id="searchInput" placeholder="Search styles, categories..." autocomplete="off">
+    <button class="search-close" id="searchClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="search-results" id="searchResults"></div>
+</div>
 
+<!-- MENU OVERLAY + DRAWER -->
+<div class="menu-overlay" id="menuOverlay"></div>
+<nav class="menu-drawer" id="menuDrawer">
+  <div class="drawer-header">
+    <img src="images/logobanner/ishelogo.webp" alt="ISHE" class="drawer-logo">
+    <button class="drawer-close" id="drawerClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="drawer-tagline">Fashion That Defines You</div>
+  <ul class="drawer-nav">
+    <li><a href="#" class="drawer-link"><i class="fa-solid fa-house"></i> Home</a></li>
+    <li><a href="#" class="drawer-link"><i class="fa-solid fa-shirt"></i> All Collections</a></li>
+    <li><a href="#" class="drawer-link"><i class="fa-solid fa-fire"></i> New Arrivals</a></li>
+    <li><a href="#" class="drawer-link"><i class="fa-solid fa-tag"></i> Sale</a></li>
+  </ul>
+  <div class="drawer-divider"></div>
+  <div class="drawer-section-title">STYLES</div>
+  <ul class="drawer-styles">
+    <li><a href="#old-money-section">✦ Old Money</a></li>
+    <li><a href="#downtown-section">✦ Downtown</a></li>
+    <li><a href="#ethnic-section">✦ Ethnic</a></li>
+    <li><a href="#countryside-section">✦ Countryside</a></li>
+    <li><a href="#cottagecore-section">✦ Cottagecore</a></li>
+    <li><a href="#athleisure-section">✦ Athleisure</a></li>
+    <li><a href="#academia-section">✦ Academia</a></li>
+    <li><a href="#coastal-section">✦ Coastal Cowgirl</a></li>
+    <li><a href="#y2k-section">✦ Y2K</a></li>
+    <li><a href="#boho-section">✦ Boho Chic</a></li>
+  </ul>
+  <div class="drawer-divider"></div>
+  <ul class="drawer-nav">
+    <li><a href="#" class="drawer-link"><i class="fa-solid fa-envelope"></i> Contact Us</a></li>
+    <li><a href="#" class="drawer-link"><i class="fa-solid fa-truck"></i> Shipping Info</a></li>
+    <li><a href="#" class="drawer-link"><i class="fa-brands fa-instagram"></i> Instagram</a></li>
+  </ul>
+  <div class="drawer-footer">ISHE 2026 · Fashion That Defines You</div>
+</nav>
+
+<!-- WISHLIST DRAWER -->
+<div class="side-overlay" id="wishlistOverlay"></div>
+<div class="side-drawer wishlist-drawer" id="wishlistDrawer">
+  <div class="side-drawer-header">
+    <span>MY WISHLIST</span>
+    <button class="drawer-close" id="wishlistClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="side-drawer-body" id="wishlistBody">
+    <div class="empty-state">
+      <i class="fa-regular fa-heart" style="font-size:40px;color:#f4b8c8;margin-bottom:12px;display:block"></i>
+      <p>Your wishlist is empty</p>
+      <span>Tap the heart on any item to save it</span>
+    </div>
+  </div>
+</div>
+
+<!-- CART DRAWER -->
+<div class="side-overlay" id="cartOverlay"></div>
+<div class="side-drawer cart-drawer" id="cartDrawer">
+  <div class="side-drawer-header">
+    <span>MY CART</span>
+    <button class="drawer-close" id="cartClose"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <div class="side-drawer-body" id="cartBody">
+    <div class="empty-state">
+      <i class="fa-solid fa-bag-shopping" style="font-size:40px;color:#f4b8c8;margin-bottom:12px;display:block"></i>
+      <p>Your cart is empty</p>
+      <span>Add items to get started</span>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total">
+      <span>TOTAL</span>
+      <span id="cartTotal">0</span>
+    </div>
+    <button class="checkout-btn" id="checkoutBtn">PROCEED TO CHECKOUT</button>
+  </div>
+</div>
+
+<!-- CHECKOUT PAGE -->
+<div class="checkout-overlay" id="checkoutOverlay">
+  <div class="checkout-page">
+    <div class="checkout-header">
+      <button class="back-btn" id="checkoutBack"><i class="fa-solid fa-arrow-left"></i></button>
+      <span>CHECKOUT</span>
+      <div></div>
+    </div>
+    <div class="checkout-body">
+      <div class="checkout-section">
+        <h3>Delivery Details</h3>
+        <input type="text" placeholder="Full Name" class="checkout-input">
+        <input type="tel" placeholder="Phone Number" class="checkout-input">
+        <input type="text" placeholder="Address Line 1" class="checkout-input">
+        <input type="text" placeholder="City" class="checkout-input">
+        <input type="text" placeholder="PIN Code" class="checkout-input">
+      </div>
+      <div class="checkout-section">
+        <h3>Payment Method</h3>
+        <div class="payment-options">
+          <label class="payment-option">
+            <input type="radio" name="payment" value="upi" checked>
+            <i class="fa-solid fa-mobile-screen"></i> UPI / PhonePe / GPay
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="card">
+            <i class="fa-solid fa-credit-card"></i> Credit / Debit Card
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment" value="cod">
+            <i class="fa-solid fa-money-bill"></i> Cash on Delivery
+          </label>
+        </div>
+      </div>
+      <div class="checkout-section" id="checkoutSummary"></div>
+      <button class="place-order-btn" id="placeOrderBtn">PLACE ORDER</button>
+    </div>
+  </div>
+</div>
+
+<!-- ORDER SUCCESS -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-box">
+    <div class="success-icon">✓</div>
+    <h2>Order Placed!</h2>
+    <p>Thank you for shopping with ISHE.<br>Your order is confirmed.</p>
+    <div class="order-id" id="orderId"></div>
+    <button class="success-btn" id="successClose">CONTINUE SHOPPING</button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop"><i class="fa-solid fa-arrow-up"></i></button>
+
+<!-- BANNER -->
 <section class="banner">
-  <div class="banner-wrapper">
-
-    <img src="images/logobanner/banner3.webp" loading="eager" fetchpriority="high" class="banner-slide active" alt="Banner">
+  <div class="banner-wrapper" id="bannerWrapper">
+    <img src="images/logobanner/banner3.webp" loading="eager" fetchpriority="high" class="banner-slide" alt="Banner">
     <img src="images/logobanner/banner1.webp" loading="lazy" class="banner-slide" alt="Banner">
     <img src="images/logobanner/banner2.webp" loading="lazy" class="banner-slide" alt="Banner">
     <img src="images/logobanner/banner4.webp" loading="lazy" class="banner-slide" alt="Banner">
   </div>
+  <div class="banner-dots" id="bannerDots">
+    <span class="bdot active" data-i="0"></span>
+    <span class="bdot" data-i="1"></span>
+    <span class="bdot" data-i="2"></span>
+    <span class="bdot" data-i="3"></span>
+  </div>
 </section>
 
-
 <!-- OLD MONEY -->
-<section class="product-section old-money">
-  <h2 class="section-title">
-    <img src="images/logobanner/oldmoney.webp" alt="Old Money" class="section-title" loading="lazy">
-  </h2>
+<section class="product-section old-money reveal" id="old-money-section">
+  <h2 class="section-title"><img src="images/logobanner/oldmoney.webp" alt="Old Money" class="section-title-img" loading="lazy"></h2>
   <div class="product-slider">
-    <div class="product-card"><img src="images/oldmoney/a1.webp" alt="Trench Coats" loading="lazy"><p>Trench Coats</p></div>
-    <div class="product-card"><img src="images/oldmoney/a2.webp" alt="Button Down" loading="lazy"><p>Button Down</p></div>
-    <div class="product-card"><img src="images/oldmoney/a3.webp" alt="Linen Pants" loading="lazy"><p>Linen Pants</p></div>
-    <div class="product-card"><img src="images/oldmoney/a4.webp" alt="Pleated Trousers" loading="lazy"><p>Pleated Trousers</p></div>
-    <div class="product-card"><img src="images/oldmoney/a5.webp" alt="Polo Shirts" loading="lazy"><p>Polo Shirts</p></div>
-    <div class="product-card"><img src="images/oldmoney/a6.webp" alt="Cashmere Sweater" loading="lazy"><p>Cashmere Sweater</p></div>
+    <div class="product-card" data-name="Trench Coats" data-category="Old Money" data-price="2499"><img src="images/oldmoney/a1.webp" alt="Trench Coats" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Trench Coats</p></div>
+    <div class="product-card" data-name="Button Down" data-category="Old Money" data-price="1299"><img src="images/oldmoney/a2.webp" alt="Button Down" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Button Down</p></div>
+    <div class="product-card" data-name="Linen Pants" data-category="Old Money" data-price="1599"><img src="images/oldmoney/a3.webp" alt="Linen Pants" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Linen Pants</p></div>
+    <div class="product-card" data-name="Pleated Trousers" data-category="Old Money" data-price="1799"><img src="images/oldmoney/a4.webp" alt="Pleated Trousers" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Pleated Trousers</p></div>
+    <div class="product-card" data-name="Polo Shirts" data-category="Old Money" data-price="999"><img src="images/oldmoney/a5.webp" alt="Polo Shirts" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Polo Shirts</p></div>
+    <div class="product-card" data-name="Cashmere Sweater" data-category="Old Money" data-price="2999"><img src="images/oldmoney/a6.webp" alt="Cashmere Sweater" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Cashmere Sweater</p></div>
   </div>
 </section>
 
 <!-- DOWNTOWN -->
-<section class="product-section downtown">
-  <h2 class="section-title">
-    <img src="images/logobanner/downtown.webp" alt="Downtown" class="section-title" loading="lazy">
-  </h2>
+<section class="product-section downtown reveal" id="downtown-section">
+  <h2 class="section-title"><img src="images/logobanner/downtown.webp" alt="Downtown" class="section-title-img" loading="lazy"></h2>
   <div class="product-slider">
-    <div class="product-card"><img src="images/downtown/b1.webp" alt="Baggy Jeans" loading="lazy"><p>Baggy Jeans</p></div>
-    <div class="product-card"><img src="images/downtown/b2.webp" alt="Graphic T" loading="lazy"><p>Graphic T</p></div>
-    <div class="product-card"><img src="images/downtown/b3.webp" alt="Leather Jackets" loading="lazy"><p>Leather Jackets</p></div>
-    <div class="product-card"><img src="images/downtown/b4.webp" alt="Distressed" loading="lazy"><p>Distressed</p></div>
-    <div class="product-card"><img src="images/downtown/b5.webp" alt="Mini Skirts" loading="lazy"><p>Mini Skirts</p></div>
-    <div class="product-card"><img src="images/downtown/b6.webp" alt="Oversized Blazer" loading="lazy"><p>Oversized Blazer</p></div>
+    <div class="product-card" data-name="Baggy Jeans" data-category="Downtown" data-price="1899"><img src="images/downtown/b1.webp" alt="Baggy Jeans" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Baggy Jeans</p></div>
+    <div class="product-card" data-name="Graphic T" data-category="Downtown" data-price="799"><img src="images/downtown/b2.webp" alt="Graphic T" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Graphic T</p></div>
+    <div class="product-card" data-name="Leather Jacket" data-category="Downtown" data-price="3499"><img src="images/downtown/b3.webp" alt="Leather Jacket" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Leather Jacket</p></div>
+    <div class="product-card" data-name="Distressed" data-category="Downtown" data-price="1499"><img src="images/downtown/b4.webp" alt="Distressed" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Distressed</p></div>
+    <div class="product-card" data-name="Mini Skirts" data-category="Downtown" data-price="999"><img src="images/downtown/b5.webp" alt="Mini Skirts" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Mini Skirts</p></div>
+    <div class="product-card" data-name="Oversized Blazer" data-category="Downtown" data-price="2299"><img src="images/downtown/b6.webp" alt="Oversized Blazer" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Oversized Blazer</p></div>
   </div>
 </section>
 
 <!-- ETHNIC -->
-<section class="product-section ethnic">
-  <h2 class="section-title">
-    <img src="images/logobanner/ethnic.webp" alt="Ethnic" class="section-title" loading="lazy">
-  </h2>
+<section class="product-section ethnic reveal" id="ethnic-section">
+  <h2 class="section-title"><img src="images/logobanner/ethnic.webp" alt="Ethnic" class="section-title-img" loading="lazy"></h2>
   <div class="product-slider">
-    <div class="product-card"><img src="images/ethnic/c1.webp" alt="Sarees" loading="lazy"><p>Sarees</p></div>
-    <div class="product-card"><img src="images/ethnic/c2.webp" alt="Kurtis" loading="lazy"><p>Kurtis</p></div>
-    <div class="product-card"><img src="images/ethnic/c3.webp" alt="Salwar Suits" loading="lazy"><p>Salwar Suits</p></div>
-    <div class="product-card"><img src="images/ethnic/c4.webp" alt="Long Skirts" loading="lazy"><p>Long Skirts</p></div>
-    <div class="product-card"><img src="images/ethnic/c5.webp" alt="Ethnic Tops" loading="lazy"><p>Ethnic Tops</p></div>
-    <div class="product-card"><img src="images/ethnic/c6.webp" alt="Sharara" loading="lazy"><p>Sharara</p></div>
+    <div class="product-card" data-name="Sarees" data-category="Ethnic" data-price="1999"><img src="images/ethnic/c1.webp" alt="Sarees" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Sarees</p></div>
+    <div class="product-card" data-name="Kurtis" data-category="Ethnic" data-price="899"><img src="images/ethnic/c2.webp" alt="Kurtis" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Kurtis</p></div>
+    <div class="product-card" data-name="Salwar Suits" data-category="Ethnic" data-price="1599"><img src="images/ethnic/c3.webp" alt="Salwar Suits" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Salwar Suits</p></div>
+    <div class="product-card" data-name="Long Skirts" data-category="Ethnic" data-price="1199"><img src="images/ethnic/c4.webp" alt="Long Skirts" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Long Skirts</p></div>
+    <div class="product-card" data-name="Ethnic Tops" data-category="Ethnic" data-price="799"><img src="images/ethnic/c5.webp" alt="Ethnic Tops" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Ethnic Tops</p></div>
+    <div class="product-card" data-name="Sharara" data-category="Ethnic" data-price="1899"><img src="images/ethnic/c6.webp" alt="Sharara" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Sharara</p></div>
   </div>
 </section>
 
 <!-- COUNTRYSIDE -->
-<section class="product-section countryside">
-  <h2 class="section-title">
-    <img src="images/logobanner/countryside.webp" alt="Countryside" class="section-title" loading="lazy">
-  </h2>
+<section class="product-section countryside reveal" id="countryside-section">
+  <h2 class="section-title"><img src="images/logobanner/countryside.webp" alt="Countryside" class="section-title-img" loading="lazy"></h2>
   <div class="product-slider">
-    <div class="product-card"><img src="images/countryside/d1.webp" alt="Plaid Shirt" loading="lazy"><p>Plaid Shirt</p></div>
-    <div class="product-card"><img src="images/countryside/d2.webp" alt="Flannel Shirt" loading="lazy"><p>Flannel Shirt</p></div>
-    <div class="product-card"><img src="images/countryside/d3.webp" alt="Denim Overalls" loading="lazy"><p>Denim Overalls</p></div>
-    <div class="product-card"><img src="images/countryside/d4.webp" alt="Cotton Dress" loading="lazy"><p>Cotton Dress</p></div>
-    <div class="product-card"><img src="images/countryside/d5.webp" alt="Knit Sweater" loading="lazy"><p>Knit Sweater</p></div>
-    <div class="product-card"><img src="images/countryside/d6.webp" alt="Linen Blouse" loading="lazy"><p>Linen Blouse</p></div>
+    <div class="product-card" data-name="Plaid Shirt" data-category="Countryside" data-price="1099"><img src="images/countryside/d1.webp" alt="Plaid Shirt" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Plaid Shirt</p></div>
+    <div class="product-card" data-name="Flannel Shirt" data-category="Countryside" data-price="999"><img src="images/countryside/d2.webp" alt="Flannel Shirt" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Flannel Shirt</p></div>
+    <div class="product-card" data-name="Denim Overalls" data-category="Countryside" data-price="1799"><img src="images/countryside/d3.webp" alt="Denim Overalls" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Denim Overalls</p></div>
+    <div class="product-card" data-name="Cotton Dress" data-category="Countryside" data-price="1399"><img src="images/countryside/d4.webp" alt="Cotton Dress" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Cotton Dress</p></div>
+    <div class="product-card" data-name="Knit Sweater" data-category="Countryside" data-price="1699"><img src="images/countryside/d5.webp" alt="Knit Sweater" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Knit Sweater</p></div>
+    <div class="product-card" data-name="Linen Blouse" data-category="Countryside" data-price="1199"><img src="images/countryside/d6.webp" alt="Linen Blouse" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Linen Blouse</p></div>
   </div>
 </section>
 
 <!-- COTTAGECORE -->
-<section class="product-section cottagecore">
-  <h2 class="section-title">
-    <img src="images/logobanner/cottagecore.webp" alt="Cottagecore" class="section-title" loading="lazy">
-  </h2>
+<section class="product-section cottagecore reveal" id="cottagecore-section">
+  <h2 class="section-title"><img src="images/logobanner/cottagecore.webp" alt="Cottagecore" class="section-title-img" loading="lazy"></h2>
   <div class="product-slider">
-    <div class="product-card"><img src="images/cottagecore/e1.webp" alt="Floral Dress" loading="lazy"><p>Floral Dress</p></div>
-    <div class="product-card"><img src="images/cottagecore/e2.webp" alt="Linen Dress" loading="lazy"><p>Linen Dress</p></div>
-    <div class="product-card"><img src="images/cottagecore/e3.webp" alt="Dungarees" loading="lazy"><p>Dungarees</p></div>
-    <div class="product-card"><img src="images/cottagecore/e4.webp" alt="Puffed Blouse" loading="lazy"><p>Puffed Blouse</p></div>
-    <div class="product-card"><img src="images/cottagecore/e5.webp" alt="Vintage Corsets" loading="lazy"><p>Vintage Corsets</p></div>
-    <div class="product-card"><img src="images/cottagecore/e6.webp" alt="Crochet Cardigan" loading="lazy"><p>Crochet Cardigan</p></div>
+    <div class="product-card" data-name="Floral Dress" data-category="Cottagecore" data-price="1599"><img src="images/cottagecore/e1.webp" alt="Floral Dress" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Floral Dress</p></div>
+    <div class="product-card" data-name="Linen Dress" data-category="Cottagecore" data-price="1799"><img src="images/cottagecore/e2.webp" alt="Linen Dress" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Linen Dress</p></div>
+    <div class="product-card" data-name="Dungarees" data-category="Cottagecore" data-price="1499"><img src="images/cottagecore/e3.webp" alt="Dungarees" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Dungarees</p></div>
+    <div class="product-card" data-name="Puffed Blouse" data-category="Cottagecore" data-price="1099"><img src="images/cottagecore/e4.webp" alt="Puffed Blouse" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Puffed Blouse</p></div>
+    <div class="product-card" data-name="Vintage Corsets" data-category="Cottagecore" data-price="1899"><img src="images/cottagecore/e5.webp" alt="Vintage Corsets" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Vintage Corsets</p></div>
+    <div class="product-card" data-name="Crochet Cardigan" data-category="Cottagecore" data-price="1399"><img src="images/cottagecore/e6.webp" alt="Crochet Cardigan" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Crochet Cardigan</p></div>
   </div>
 </section>
 
 <!-- ATHLEISURE -->
-<section class="product-section athleisure">
-  <h2 class="section-title">
-    <img src="images/logobanner/athleisure.webp" alt="Athleisure" class="section-title" loading="lazy">
-  </h2>
+<section class="product-section athleisure reveal" id="athleisure-section">
+  <h2 class="section-title"><img src="images/logobanner/athleisure.webp" alt="Athleisure" class="section-title-img" loading="lazy"></h2>
   <div class="product-slider">
-    <div class="product-card"><img src="images/athleisure/f1.webp" alt="Sports Bra" loading="lazy"><p>Sports Bra</p></div>
-    <div class="product-card"><img src="images/athleisure/f2.webp" alt="Track Pants" loading="lazy"><p>Track Pants</p></div>
-    <div class="product-card"><img src="images/athleisure/f3.webp" alt="Biker Shorts" loading="lazy"><p>Biker Shorts</p></div>
-    <div class="product-card"><img src="images/athleisure/f4.webp" alt="Zip-up Jacket" loading="lazy"><p>Zip-up Jacket</p></div>
-    <div class="product-card"><img src="images/athleisure/f5.webp" alt="Leggings" loading="lazy"><p>Leggings</p></div>
-    <div class="product-card"><img src="images/athleisure/f6.webp" alt="Athletic Shorts" loading="lazy"><p>Athletic Shorts</p></div>
+    <div class="product-card" data-name="Sports Bra" data-category="Athleisure" data-price="799"><img src="images/athleisure/f1.webp" alt="Sports Bra" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Sports Bra</p></div>
+    <div class="product-card" data-name="Track Pants" data-category="Athleisure" data-price="999"><img src="images/athleisure/f2.webp" alt="Track Pants" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Track Pants</p></div>
+    <div class="product-card" data-name="Biker Shorts" data-category="Athleisure" data-price="699"><img src="images/athleisure/f3.webp" alt="Biker Shorts" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Biker Shorts</p></div>
+    <div class="product-card" data-name="Zip-up Jacket" data-category="Athleisure" data-price="1599"><img src="images/athleisure/f4.webp" alt="Zip-up Jacket" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Zip-up Jacket</p></div>
+    <div class="product-card" data-name="Leggings" data-category="Athleisure" data-price="899"><img src="images/athleisure/f5.webp" alt="Leggings" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Leggings</p></div>
+    <div class="product-card" data-name="Athletic Shorts" data-category="Athleisure" data-price="599"><img src="images/athleisure/f6.webp" alt="Athletic Shorts" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Athletic Shorts</p></div>
   </div>
 </section>
 
 <!-- ACADEMIA -->
-<section class="product-section academia">
-  <h2 class="section-title">
-    <img src="images/logobanner/academia.webp" alt="Academia" class="section-title" loading="lazy">
-  </h2>
+<section class="product-section academia reveal" id="academia-section">
+  <h2 class="section-title"><img src="images/logobanner/academia.webp" alt="Academia" class="section-title-img" loading="lazy"></h2>
   <div class="product-slider">
-    <div class="product-card"><img src="images/academia/g1.webp" alt="Oxford Shirts" loading="lazy"><p>Oxford Shirts</p></div>
-    <div class="product-card"><img src="images/academia/g2.webp" alt="Chinos" loading="lazy"><p>Chinos</p></div>
-    <div class="product-card"><img src="images/academia/g3.webp" alt="Pleated Skirts" loading="lazy"><p>Pleated Skirts</p></div>
-    <div class="product-card"><img src="images/academia/g4.webp" alt="Structured Blazers" loading="lazy"><p>Structured Blazers</p></div>
-    <div class="product-card"><img src="images/academia/g5.webp" alt="Turtleneck Sweater" loading="lazy"><p>Turtleneck Sweater</p></div>
-    <div class="product-card"><img src="images/academia/g6.webp" alt="Sweater Vest" loading="lazy"><p>Sweater Vest</p></div>
+    <div class="product-card" data-name="Oxford Shirts" data-category="Academia" data-price="1199"><img src="images/academia/g1.webp" alt="Oxford Shirts" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Oxford Shirts</p></div>
+    <div class="product-card" data-name="Chinos" data-category="Academia" data-price="1399"><img src="images/academia/g2.webp" alt="Chinos" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Chinos</p></div>
+    <div class="product-card" data-name="Pleated Skirts" data-category="Academia" data-price="1099"><img src="images/academia/g3.webp" alt="Pleated Skirts" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Pleated Skirts</p></div>
+    <div class="product-card" data-name="Structured Blazer" data-category="Academia" data-price="2499"><img src="images/academia/g4.webp" alt="Structured Blazers" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Structured Blazers</p></div>
+    <div class="product-card" data-name="Turtleneck Sweater" data-category="Academia" data-price="1699"><img src="images/academia/g5.webp" alt="Turtleneck Sweater" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Turtleneck Sweater</p></div>
+    <div class="product-card" data-name="Sweater Vest" data-category="Academia" data-price="1299"><img src="images/academia/g6.webp" alt="Sweater Vest" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Sweater Vest</p></div>
   </div>
 </section>
 
 <!-- COASTAL COWGIRL -->
-<section class="product-section coastal-cowgirl">
-  <h2 class="section-title">
-    <img src="images/logobanner/coastalcowgirl.webp" alt="Coastal Cowgirl" class="section-title" loading="lazy">
-  </h2>
+<section class="product-section coastal-cowgirl reveal" id="coastal-section">
+  <h2 class="section-title"><img src="images/logobanner/coastalcowgirl.webp" alt="Coastal Cowgirl" class="section-title-img" loading="lazy"></h2>
   <div class="product-slider">
-    <div class="product-card"><img src="images/coastalcowgirl/h1.webp" alt="Flowy Sundress" loading="lazy"><p>Flowy Sundress</p></div>
-    <div class="product-card"><img src="images/coastalcowgirl/h2.webp" alt="Cardigan" loading="lazy"><p>Cardigan</p></div>
-    <div class="product-card"><img src="images/coastalcowgirl/h3.webp" alt="Denim Shorts" loading="lazy"><p>Denim Shorts</p></div>
-    <div class="product-card"><img src="images/coastalcowgirl/h4.webp" alt="Maxi Dress" loading="lazy"><p>Maxi Dress</p></div>
-    <div class="product-card"><img src="images/coastalcowgirl/h5.webp" alt="Flared Jeans" loading="lazy"><p>Flared Jeans</p></div>
-    <div class="product-card"><img src="images/coastalcowgirl/h6.webp" alt="Crochet Top" loading="lazy"><p>Crochet Top</p></div>
+    <div class="product-card" data-name="Flowy Sundress" data-category="Coastal Cowgirl" data-price="1599"><img src="images/coastalcowgirl/h1.webp" alt="Flowy Sundress" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Flowy Sundress</p></div>
+    <div class="product-card" data-name="Cardigan" data-category="Coastal Cowgirl" data-price="1299"><img src="images/coastalcowgirl/h2.webp" alt="Cardigan" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Cardigan</p></div>
+    <div class="product-card" data-name="Denim Shorts" data-category="Coastal Cowgirl" data-price="999"><img src="images/coastalcowgirl/h3.webp" alt="Denim Shorts" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Denim Shorts</p></div>
+    <div class="product-card" data-name="Maxi Dress" data-category="Coastal Cowgirl" data-price="1899"><img src="images/coastalcowgirl/h4.webp" alt="Maxi Dress" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Maxi Dress</p></div>
+    <div class="product-card" data-name="Flared Jeans" data-category="Coastal Cowgirl" data-price="1699"><img src="images/coastalcowgirl/h5.webp" alt="Flared Jeans" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Flared Jeans</p></div>
+    <div class="product-card" data-name="Crochet Top" data-category="Coastal Cowgirl" data-price="1099"><img src="images/coastalcowgirl/h6.webp" alt="Crochet Top" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Crochet Top</p></div>
   </div>
 </section>
 
 <!-- Y2K -->
-<section class="product-section y2k">
-  <h2 class="section-title">
-    <img src="images/logobanner/y2k.webp" alt="Y2K" class="section-title" loading="lazy">
-  </h2>
+<section class="product-section y2k reveal" id="y2k-section">
+  <h2 class="section-title"><img src="images/logobanner/y2k.webp" alt="Y2K" class="section-title-img" loading="lazy"></h2>
   <div class="product-slider">
-    <div class="product-card"><img src="images/y2k/i1.webp" alt="Baby T" loading="lazy"><p>Baby T</p></div>
-    <div class="product-card"><img src="images/y2k/i2.webp" alt="Tube Top" loading="lazy"><p>Tube Top</p></div>
-    <div class="product-card"><img src="images/y2k/i3.webp" alt="Low Rise Jeans" loading="lazy"><p>Low Rise Jeans</p></div>
-    <div class="product-card"><img src="images/y2k/i4.webp" alt="Midi Skirts" loading="lazy"><p>Midi Skirts</p></div>
-    <div class="product-card"><img src="images/y2k/i5.webp" alt="Bootcut Jeans" loading="lazy"><p>Bootcut Jeans</p></div>
-    <div class="product-card"><img src="images/y2k/i6.webp" alt="Rhinestone Top" loading="lazy"><p>Rhinestone Top</p></div>
+    <div class="product-card" data-name="Baby T" data-category="Y2K" data-price="699"><img src="images/y2k/i1.webp" alt="Baby T" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Baby T</p></div>
+    <div class="product-card" data-name="Tube Top" data-category="Y2K" data-price="799"><img src="images/y2k/i2.webp" alt="Tube Top" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Tube Top</p></div>
+    <div class="product-card" data-name="Low Rise Jeans" data-category="Y2K" data-price="1599"><img src="images/y2k/i3.webp" alt="Low Rise Jeans" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Low Rise Jeans</p></div>
+    <div class="product-card" data-name="Midi Skirts" data-category="Y2K" data-price="1199"><img src="images/y2k/i4.webp" alt="Midi Skirts" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Midi Skirts</p></div>
+    <div class="product-card" data-name="Bootcut Jeans" data-category="Y2K" data-price="1799"><img src="images/y2k/i5.webp" alt="Bootcut Jeans" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Bootcut Jeans</p></div>
+    <div class="product-card" data-name="Rhinestone Top" data-category="Y2K" data-price="999"><img src="images/y2k/i6.webp" alt="Rhinestone Top" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Rhinestone Top</p></div>
   </div>
 </section>
 
 <!-- BOHO CHIC -->
-<section class="product-section boho-chic">
-  <h2 class="section-title">
-    <img src="images/logobanner/bohochic.webp" alt="Boho Chic" class="section-title" loading="lazy">
-  </h2>
+<section class="product-section boho-chic reveal" id="boho-section">
+  <h2 class="section-title"><img src="images/logobanner/bohochic.webp" alt="Boho Chic" class="section-title-img" loading="lazy"></h2>
   <div class="product-slider">
-    <div class="product-card"><img src="images/bohochic/j1.webp" alt="Peasant Blouse" loading="lazy"><p>Peasant Blouse</p></div>
-    <div class="product-card"><img src="images/bohochic/j2.webp" alt="Kimono" loading="lazy"><p>Kimono</p></div>
-    <div class="product-card"><img src="images/bohochic/j3.webp" alt="Fringe Jacket" loading="lazy"><p>Fringe Jacket</p></div>
-    <div class="product-card"><img src="images/bohochic/j4.webp" alt="Wide Leg Pants" loading="lazy"><p>Wide Leg Pants</p></div>
-    <div class="product-card"><img src="images/bohochic/j5.webp" alt="Embroidered Blouse" loading="lazy"><p>Embroidered Blouse</p></div>
-    <div class="product-card"><img src="images/bohochic/j6.webp" alt="Ponchos" loading="lazy"><p>Ponchos</p></div>
+    <div class="product-card" data-name="Peasant Blouse" data-category="Boho Chic" data-price="1099"><img src="images/bohochic/j1.webp" alt="Peasant Blouse" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Peasant Blouse</p></div>
+    <div class="product-card" data-name="Kimono" data-category="Boho Chic" data-price="1499"><img src="images/bohochic/j2.webp" alt="Kimono" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Kimono</p></div>
+    <div class="product-card" data-name="Fringe Jacket" data-category="Boho Chic" data-price="2299"><img src="images/bohochic/j3.webp" alt="Fringe Jacket" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Fringe Jacket</p></div>
+    <div class="product-card" data-name="Wide Leg Pants" data-category="Boho Chic" data-price="1599"><img src="images/bohochic/j4.webp" alt="Wide Leg Pants" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Wide Leg Pants</p></div>
+    <div class="product-card" data-name="Embroidered Blouse" data-category="Boho Chic" data-price="1299"><img src="images/bohochic/j5.webp" alt="Embroidered Blouse" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Embroidered Blouse</p></div>
+    <div class="product-card" data-name="Ponchos" data-category="Boho Chic" data-price="1799"><img src="images/bohochic/j6.webp" alt="Ponchos" loading="lazy"><div class="card-actions"><button class="wish-btn"><i class="fa-regular fa-heart"></i></button><button class="cart-add-btn"><i class="fa-solid fa-bag-shopping"></i></button></div><p>Ponchos</p></div>
   </div>
 </section>
-
 
 <footer class="shop-footer">
   <div class="footer-content">
     <h2 class="footer-title">OFFICIAL WEBSITE &copy; 2026</h2>
     <nav class="footer-nav">
-      <a href="https://youtu.be/xMHJGd3wwZk?si=0othaTLevpqvMYUz" target="_blank" rel="noopener">SHOP</a>
-      <a href="https://youtu.be/xMHJGd3wwZk?si=0othaTLevpqvMYUz" target="_blank" rel="noopener">CONTACT</a>
-      <a href="https://youtu.be/xMHJGd3wwZk?si=0othaTLevpqvMYUz" target="_blank" rel="noopener">ABOUT</a>
-      <a href="https://youtu.be/xMHJGd3wwZk?si=0othaTLevpqvMYUz" target="_blank" rel="noopener">SHIPPING</a>
+      <a href="#">SHOP</a>
+      <a href="#">CONTACT</a>
+      <a href="#">ABOUT</a>
+      <a href="#">SHIPPING</a>
     </nav>
     <div class="footer-credits">
       <div class="credit-item">
@@ -242,6 +408,5 @@
 </footer>
 
 <script src="script.js"></script>
-
 </body>
-</html>    
+</html>
