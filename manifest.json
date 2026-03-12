@@ -1,0 +1,31 @@
+{
+  "name": "ISHÉ Clothing",
+  "short_name": "ISHÉ",
+  "description": "Fashion That Defines You",
+  "start_url": "/ISHEclothing/",
+  "scope": "/ISHEclothing/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#fad5a5",
+  "theme_color": "#fad5a5",
+  "icons": [
+    {
+      "src": "images/logobanner/icon-512.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/logobanner/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "images/logobanner/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

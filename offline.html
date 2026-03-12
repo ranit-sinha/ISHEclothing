@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>ISHÉ — No Connection</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(240deg, antiquewhite, #fad5a5, #ffadf1);
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .logo {
+    width: 220px;
+    max-width: 70vw;
+    margin-bottom: 40px;
+    opacity: 0.9;
+  }
+
+  .wifi-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.92); }
+  }
+
+  h1 {
+    font-size: 22px;
+    color: #5a2a35;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 14px;
+    color: #ab6065;
+    letter-spacing: 0.05em;
+    line-height: 1.7;
+    max-width: 280px;
+    margin-bottom: 36px;
+  }
+
+  .retry-btn {
+    padding: 14px 40px;
+    background: linear-gradient(120deg, #8c374e, #ab6065);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: bold;
+    box-shadow: 0 4px 20px rgba(140,55,78,0.25);
+    transition: transform 0.15s, opacity 0.15s;
+  }
+
+  .retry-btn:active {
+    transform: scale(0.97);
+    opacity: 0.9;
+  }
+
+  .tagline {
+    margin-top: 48px;
+    font-size: 10px;
+    letter-spacing: 0.25em;
+    color: #c9a0a0;
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+
+  <img src="images/logobanner/logo2.webp" alt="ISHE" class="logo"
+       onerror="this.style.display='none'">
+
+  <div class="wifi-icon">📶</div>
+
+  <h1>No Connection</h1>
+
+  <p>Please check your internet connection and try again.<br>
+  ISHÉ needs a connection to load the latest collections.</p>
+
+  <button class="retry-btn" onclick="window.location.reload()">
+    Try Again
+  </button>
+
+  <p class="tagline">Fashion That Defines You</p>
+
+</body>
+</html>
