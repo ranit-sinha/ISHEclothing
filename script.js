@@ -1,3 +1,11 @@
+/* Service worker */
+if ("serviceWorker" in navigator) {
+      window.addEventListener("load", function() {
+      navigator.serviceWorker.register("./service-worker.js").catch(function() {});
+     });
+  }
+
+
 (function () {
 
   function safeGet(key) {
@@ -422,12 +430,6 @@
       document.querySelectorAll(".reveal").forEach(function(el) { el.classList.add("visible"); });
     }
 
-    /* Service worker */
-    if ("serviceWorker" in navigator) {
-      window.addEventListener("load", function() {
-        navigator.serviceWorker.register("./service-worker.js").catch(function() {});
-      });
-    }
 
   } /* end init() */
 
