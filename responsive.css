@@ -1,6 +1,4 @@
 @media (max-width: 768px) {
-  #preloader { width: 100vw !important; height: 100vh !important; }
-  .loader-logo { width: 500px !important; max-width: 85vw !important; height: auto; transform: translateY(-60px); }
 
   .marquee-bar { font-size: 10px; padding: 6px 0; }
 
