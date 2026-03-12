@@ -15,32 +15,6 @@ if ("serviceWorker" in navigator) {
     try { localStorage.setItem(key, JSON.stringify(val)); } catch(e) {}
   }
 
-  /* PRELOADER */
-  var preloader = document.getElementById("preloader");
-  var PRELOAD_MS = 2200;
-  var pageStartTime = Date.now();
-
-  function hidePreloader() {
-    if (!preloader) return;
-    preloader.style.transition = "opacity 1s ease";
-    preloader.style.opacity = "0";
-    setTimeout(function() {
-      preloader.style.display = "none";
-    }, 1000);
-  }
-
-  function tryHide() {
-    var elapsed = Date.now() - pageStartTime;
-    setTimeout(hidePreloader, Math.max(0, PRELOAD_MS - elapsed));
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", tryHide);
-  } else {
-    tryHide();
-  }
-  setTimeout(hidePreloader, 4000);
-
   /* TOAST */
   function showToast(msg) {
     var t = document.getElementById("toast");
