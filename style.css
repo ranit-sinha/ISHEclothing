@@ -54,10 +54,10 @@ html::-webkit-scrollbar, body::-webkit-scrollbar { display: none; }
 .nav-right { display: flex; align-items: center; gap: 37px; padding: 5px 0; }
 .nav-icon {
   -webkit-tap-highlight-color: transparent; outline: none;
-  cursor: pointer; font-size: 18px; padding: 5px 0 0 0; color: #ab6065;
+  cursor: pointer; font-size: 18px; padding: 5px 0 0 0; color: #802d43;
   position: relative;
 }
-.nav-icon:hover { color: #8c374e; transition: 0.3s; }
+.nav-icon:hover { color: #520f21; transition: 0.3s; }
 .logo { height: 60px; width: auto; display: flex; align-items: center; }
 .logo img { height: 55px; width: auto; margin-bottom: 5px; margin-left: 20px; padding-left: 5px; object-fit: contain; }
 
