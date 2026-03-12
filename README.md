@@ -7,7 +7,7 @@ A frontend e-commerce website for ISHÉ Clothing, a multi-aesthetic fashion bran
 ---
 
 ## Live Site
- [isheclothing.onrender.com](https://isheclothing.onrender.com/)
+ [ranit-sinha.github.io/ISHEclothing/](https://ranit-sinha.github.io/ISHEclothing/)
 
 ---
 
